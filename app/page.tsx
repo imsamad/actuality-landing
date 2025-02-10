@@ -21,7 +21,7 @@ import dynamic from 'next/dynamic';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 export default function Home() {
   return (
-    <>
+    <div className="w-screen overflow-hidden" >
       <HeroPage />
 
       <OrgLogos />
@@ -210,7 +210,7 @@ export default function Home() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

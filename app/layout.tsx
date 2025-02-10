@@ -26,14 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        />
-      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9FAFB] max-w-[100vw] overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9FAFB] max-w-[100vw] w-screen overflow-x-hidden`}
       >
         {children}
       </body>

@@ -30,24 +30,23 @@ export const HeroPage = () => {
           background: "linear-gradient(to bottom, #F9FAFB ,#EEF2FF)",
         }}
       />
-      <div className="z-10">
+      <div className="z-10  log-1 ">
         <Navbar />
-        <div className="h-[220px] w-full" />
+        <div className="h-36 md:h-[220px] w-full" />
         <div className="flex justify-center">
           <FancyButton />
         </div>
         <div className="flex flex-col items-center mt-10">
-          <Heading className="leading-[3.75rem] text-[3.75rem] font-[500]">
+          <Heading className="text-3xl md:leading-[3.75rem] md:text-[3.75rem] font-[500]">
             Create winning RFP
           </Heading>
-          <Heading className="leading-[3.75rem] text-[3.75rem] font-[500]">
+          <Heading className="text-3xl md:leading-[3.75rem] md:text-[3.75rem] font-[500]">
             responses with Actuality AI
           </Heading>
         </div>
 
-        <div className="flex flex-col items-center text-[1.3rem] text-[#6B7280] mt-10">
-          <p>Automate your RFP responses, streamline team collaboration, and</p>
-          <p> win more bids with AI-powered efficiency.</p>
+        <div className="flex flex-col items-center text-center text-lg md:text-[1.3rem] text-[#6B7280] mt-10">
+          <p>Automate your RFP responses, streamline team collaboration, and <br className="hidden md:block" /> win more bids with AI-powered efficiency.</p>
         </div>
         <div className="flex justify-center gap-6 mt-10">
           <BookDemoButton className="p-6 rounded-xl text-lg" />
@@ -82,17 +81,13 @@ export const HeroPage = () => {
 const FancyButton = () => {
   return (
     <div className="inline-block rounded-full p-[1px] mx-auto relative overflow-hidden cursor-pointer">
-      <button className="  relative   flex items-center p-2 px-4 border rounded-full z-40 bg-[#F9FAFB]">
+      <button className="relative flex items-center py-[0.25rem] md:py-2 px-4 border rounded-full z-40 bg-[#F9FAFB]">
         <img
           src="/icons/sparkles.png"
           alt="star icon"
-          className="mr-2"
-          style={{
-            width: 24,
-            height: 24,
-          }}
+          className="mr-2 md:w-[24px] md:h-[24px]"
         />
-        <span className="text-[16px] text-[#6B7280]">
+        <span className="text-[12px] md:text-[16px] text-[#6B7280]">
           Say hello to Actuality AI
         </span>
       </button>
@@ -115,16 +110,24 @@ const FancyButton = () => {
 
 const Navbar = () => {
   return (
-    <div className="fixed z-[100000] top-10 left-0 right-0">
-      <div className="container  z-100  mx-auto h-[70px] backdrop-blur-md w-full shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   p-4 rounded-[1.4rem] flex items-center justify-between bg-transparent">
+    <div className="fixed z-[100000] top-4 md:top-10 left-0 right-0 ">
+      <div className="container z-100 mx-auto h-[60px] md:h-[70px] backdrop-blur-md w-full shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   p-4 rounded-[1rem] md:rounded-[1.4rem] flex items-center justify-between bg-transparent">
         {/* <h1 className="text-3xl font-semibold">Actuality</h1> */}
         <img
           src="/icons/actuality.png"
           width="130px"
           height="100px"
           alt="csd"
+          className="hidden md:block"
         />
-        <BookDemoButton className="text-[1.1rem] py-6 rounded-xl" />
+        <img
+          src="/icons/actuality-mini.svg"
+          width="40px"
+          height="40px"
+          alt="csd"
+          className="md:hidden block"
+        />
+        <BookDemoButton className="text-[1.1rem] py-4 md:py-6 rounded-lg md:rounded-xl " />
       </div>
     </div>
   );
