@@ -5,7 +5,19 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+/* .seamless_imgs{
 
+    transform: scale(1.5);
+    width: 120%;
+    height: 120%;
+}
+@media (min-width: 768px) {
+    .seamless_imgs{
+        transform: scale(1.5);
+        width: 120%;
+        height: 120%;
+    }
+} */
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -64,11 +76,17 @@ body {
     animation-play-state: paused;
 }
 .logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+  height: 25px;
+  margin: 0 15px;
   /* border:1px solid green */
 }
+@media (min-width: 768px) { /* md breakpoint */
+    .logos-slide img {
+      height: 50px;
+      margin: 0 40px;
+    }
 
+}
 @keyframes rotateGradient {
     from {
         transform: translate(-50%, -50%) scale(1.8) rotate(0turn);

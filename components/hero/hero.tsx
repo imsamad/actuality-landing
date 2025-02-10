@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import { Heading } from "@/components/typography";
 import { useEffect, useRef, useState } from "react";
 
-
 export const HeroPage = () => {
   const dashboardRef = useRef<HTMLImageElement>(null);
 
@@ -30,7 +29,7 @@ export const HeroPage = () => {
           background: "linear-gradient(to bottom, #F9FAFB ,#EEF2FF)",
         }}
       />
-      <div className="z-10  log-1 ">
+      <div className="z-10">
         <Navbar />
         <div className="h-36 md:h-[220px] w-full" />
         <div className="flex justify-center">
@@ -46,24 +45,28 @@ export const HeroPage = () => {
         </div>
 
         <div className="flex flex-col items-center text-center text-lg md:text-[1.3rem] text-[#6B7280] mt-10">
-          <p>Automate your RFP responses, streamline team collaboration, and <br className="hidden md:block" /> win more bids with AI-powered efficiency.</p>
+          <p>
+            Automate your RFP responses, streamline team collaboration, and{" "}
+            <br className="hidden md:block" /> win more bids with AI-powered
+            efficiency.
+          </p>
         </div>
-        <div className="flex justify-center gap-6 mt-10">
-          <BookDemoButton className="p-6 rounded-xl text-lg" />
+        <div className="w-full flex flex-col md:flex-row justify-center gap-4 md:gap-6 mt-10 px-4 md:px-0">
+          <BookDemoButton className="p-6 rounded-xl text-lg w-full md:w-auto" />
           <Button
             variant="ghost"
-            className="bg-transparent font-semibold text-[#6B7280] border-[1px] border-gray-300 hover:bg-transparent hover:text-gray-700 p-6 rounded-xl text-lg hover:border-[1px] hover:border-gray-500 "
+            className="bg-transparent font-semibold text-gray-700 md:text-[#6B7280] border-[1px] border-gray-300 hover:bg-transparent hover:text-gray-700 p-6 rounded-xl text-md md:text-lg hover:border-[1px] hover:border-gray-500 "
           >
             Request Early Access
           </Button>
         </div>
 
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto mt-10 md:px-0 px-4">
           <img
             ref={dashboardRef}
             alt="dashnoard"
             src="/assets/Dashboard.png"
-            className="w-full"
+            className="w-full shadow-[0px_2px_16px_0px_#1F29370D] md:shadow-none"
             style={{
               width: "100%",
               height: "100%",
@@ -108,25 +111,28 @@ const FancyButton = () => {
   );
 };
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
-    <div className="fixed z-[100000] top-4 md:top-10 left-0 right-0 ">
+    <div className="fixed  z-[100000] top-4 md:top-10 left-0 right-0 flex justify-center md:px-0 px-2 md:pl-4">
       <div className="container z-100 mx-auto h-[60px] md:h-[70px] backdrop-blur-md w-full shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   p-4 rounded-[1rem] md:rounded-[1.4rem] flex items-center justify-between bg-transparent">
         {/* <h1 className="text-3xl font-semibold">Actuality</h1> */}
-        <img
-          src="/icons/actuality.png"
-          width="130px"
-          height="100px"
-          alt="csd"
-          className="hidden md:block"
-        />
-        <img
-          src="/icons/actuality-mini.svg"
-          width="40px"
-          height="40px"
-          alt="csd"
-          className="md:hidden block"
-        />
+        <a href="/" >
+          <img
+            src="/icons/actuality.png"
+            width="130px"
+            height="100px"
+            alt="csd"
+            className="hidden md:block"
+          />
+          <img
+            src="/icons/actuality-mini.svg"
+            width="40px"
+            height="40px"
+            alt="csd"
+            className="md:hidden block"
+          />
+        </a>
+
         <BookDemoButton className="text-[1.1rem] py-4 md:py-6 rounded-lg md:rounded-xl " />
       </div>
     </div>
@@ -135,12 +141,16 @@ const Navbar = () => {
 
 export const BookDemoButton = ({ className }: { className?: string }) => {
   return (
-    <a href="https://calendly.com/rishabh_gupta/30min?month=2025-02" target="_blank" >
-    <Button
-      className={`bg-gradient-to-b from-[#374151] to-[#1F2937] text-white font-semibold ${className}`}
+    <a
+      href="https://calendly.com/rishabh_gupta/30min?month=2025-02"
+      target="_blank"
     >
-      Book a demo
-    </Button></a>
+      <Button
+        className={`bg-gradient-to-b from-[#374151] to-[#1F2937] text-white font-semibold ${className}`}
+      >
+        Book a demo
+      </Button>
+    </a>
   );
 };
 

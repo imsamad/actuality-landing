@@ -1,6 +1,6 @@
 export const OrgLogos = () => {
   return <>
-    <p className="mt-14 text-center text-xl text-[#6B7280]">Trusted by</p>
+    <p className="mt-14 text-center text-md md:text-xl text-[#6B7280]">Trusted by</p>
 
     <div className="logos-wrapper z-[-2] container mx-auto overflow-hidden">
       <div className="logos my-10 ">
@@ -15,7 +15,7 @@ export const OrgLogos = () => {
             "/icons/logo-seneca.png",
           ]).flat().map((v) => (
             <img
-              className="brightness-0 contrast-100"
+              className="brightness-0 contrast-100 "
               src={v}
               key={Math.random().toString()}
               alt={v}
