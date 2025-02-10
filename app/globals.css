@@ -15,16 +15,16 @@ body {
   }
 }
 .logos {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* padding: 60px 0; */
-  /* width: 100%; */
   width: 100%;
+  /* width: 100%; */
   /* background: white; */
   white-space: nowrap;
-
+  justify-content: flex-start;
   /* border:1px solid red; */
   display: flex;
-  z-index: 1;
+  z-index: 100;
 }
 
 
@@ -60,10 +60,13 @@ body {
   display: flex;
   animation: 35s slide infinite linear;
 }
-
+.logos-wrapper:hover {
+    animation-play-state: paused;
+}
 .logos-slide img {
   height: 50px;
   margin: 0 40px;
+  /* border:1px solid green */
 }
 
 @keyframes rotateGradient {

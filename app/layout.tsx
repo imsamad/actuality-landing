@@ -6,13 +6,12 @@ import Head from "next/head";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight:["100","200","300","400","500",'600',"700","800","900"]
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -28,8 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-            </Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9FAFB] max-w-[100vw] overflow-x-hidden`}
       >

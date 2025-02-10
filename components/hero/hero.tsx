@@ -63,7 +63,7 @@ export const HeroPage = () => {
           <img
             ref={dashboardRef}
             alt="dashnoard"
-            src="/icons/Dashboard.png"
+            src="/assets/Dashboard.png"
             className="w-full"
             style={{
               width: "100%",

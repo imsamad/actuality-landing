@@ -28,28 +28,23 @@ export default function Home() {
           RFP process, giving you the edge to secure more wins.
         </p>
       </div>
-      {/* <div className="w-screen h-screen log-1" >
-        <img src="/assets/anim1.svg" style={{
-          width:"100vw",
-          height:"100vh"
-        }} />
-      </div> */}
+
       <div className="flex gap-12 mt-24  container mx-auto">
         <AnimationCard
-          image="/assets/anim1.svg"
+          image="/assets/anim4.svg"
           title="Reduce Response Time"
           subtitle="Automate time-consuming tasks like data entry and document review to cut down response time from days to weeks."
         />
         <AnimationCard
-          image="/assets/anim2.svg"
+          image="/assets/anim5.svg"
           title="Increase win rates"
           subtitle="Leverage AI-powered insights and industry best practices to craft compelling, error-free proposals that stand out."
         />
 
         <AnimationCard
-          image="/assets/anim3.svg"
+          image="/assets/anim6.svg"
           title="Add AEC integrations"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          subtitle="Easily connect tools like Slack, Google Drive, Salesforce, and Procore. Actuality simplifies RFP responses and pre-construction tasks, boosting efficiency and helping you win more bids."
         />
         {/* <AnimationCard
           image="/assets/anim2.svg"
@@ -343,7 +338,7 @@ const AnimationCard = ({
   image: string;
 }) => {
   return (
-    <div className="rounded-3xl bg-gradient-to-b from-[#F8FAFB] to-[#0000ff07] flex flex-col  items-center gap-6 px-14 py-8 border-[1px] border-[#E5E7EB  ]">
+    <div className="rounded-3xl w-1/3 bg-gradient-to-b from-[#F8FAFB] to-[#0000ff07] flex flex-col  items-center gap-6 px-14 py-8 border-[1px] border-[#E5E7EB]">
       <img
         src={image}
         style={{
