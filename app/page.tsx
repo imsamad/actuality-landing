@@ -1,3 +1,4 @@
+"use client"
 import {
   BookDemoButton,
   ContactButtons,
@@ -7,37 +8,35 @@ import { Heading, SubHeading } from "@/components/typography";
 import { subtle } from "node:crypto";
 import { FAQs } from "./faq";
 import { Button } from "@/components/ui/button";
+import { OrgLogos } from "@/components/OrgLogos";
 
 export default function Home() {
   return (
     <>
-      <div
-        className="absolute left-0 right-0 -z-10 overflow-hidden"
-        style={{
-          minHeight: "110vh",
-          maxHeight: "110vh",
-          background:
-            "linear-gradient(to bottom, #EEF2FF 0%, #F9FAFB 50%, #EEF2FF 90%)",
-        }}
-      />
-
       <HeroPage />
-      <div className="flex flex-col items-center">
-        <Heading className="text-[2.4rem] leading-[2.4rem] mt-10 mb-6">
+
+      <OrgLogos />
+      <div className="flex flex-col items-center mt-24">
+        <Heading className="text-[2.7rem] leading-[2.5rem] mb-6">
           Unleash the power of AI for RFP success
         </Heading>
-        <SubHeading className="text-2xl text-[#6B7280]">
+        <p className="text-md text-[#6B7280]">
           Actuality AI is designed specifically for AEC companies to streamline
           and automate the
-        </SubHeading>
-        <SubHeading className="text-2xl text-[#6B7280]">
+        </p>
+        <p className="text-md text-[#6B7280]">
           RFP process, giving you the edge to secure more wins.
-        </SubHeading>
+        </p>
       </div>
-
-      <div className="flex gap-12  mt-32 mb-20 container mx-auto">
+      {/* <div className="w-screen h-screen log-1" >
+        <img src="/assets/anim1.svg" style={{
+          width:"100vw",
+          height:"100vh"
+        }} />
+      </div> */}
+      <div className="flex gap-12 mt-24  container mx-auto">
         <AnimationCard
-          image="/assets/anim4.svg"
+          image="/assets/anim1.svg"
           title="Reduce Response Time"
           subtitle="Automate time-consuming tasks like data entry and document review to cut down response time from days to weeks."
         />
@@ -48,7 +47,7 @@ export default function Home() {
         />
 
         <AnimationCard
-          image="/assets/anim2.svg"
+          image="/assets/anim3.svg"
           title="Add AEC integrations"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
@@ -60,26 +59,26 @@ export default function Home() {
       </div>
 
       {/* features */}
-      <div className="flex flex-col items-center  mb-32  ">
-        <Heading className="text-[2.4rem] leading-[2.4rem] mt-10 mb-6">
+      <div className="flex flex-col items-center mt-24">
+        <Heading className="text-[2.7rem] leading-[2.5rem]  mb-6">
           Features that drive results
         </Heading>
-        <SubHeading className="text-2xl text-[#6B7280]">
+        <p className="text-md text-[#6B7280]">
           Empower your team with tools that simplify complexity and elevate
           proposal quality.
-        </SubHeading>
-        <SubHeading className="text-2xl text-[#6B7280]">
+        </p>
+        <p className="text-md text-[#6B7280]">
           From AI-driven insights to seamless collaboration, Actuality helps you
           create standout
-        </SubHeading>
-        <SubHeading className="text-2xl text-[#6B7280]">
+        </p>
+        <p className="text-md text-[#6B7280]">
           submissions that win more projects with less effort.
-        </SubHeading>
+        </p>
       </div>
-      <div className="grid grid-cols-2 grid-rows-auto gap-20 container mx-auto">
+      <div className="grid grid-cols-2 grid-rows-auto gap-20 gap-y-24 container mx-auto mt-28 ">
         <Tmp2 image="/assets/team-selector.png" className="px-8 pt-8 " />
         <Tmp3
-          img1="/assets/sparkles.png"
+          img1="/icons2/sparkles.png"
           l1="Content Generation"
           title="Craft compelling proposals effortlessly with AI-powered content generation."
           subtitle="Say goodbye to writer's block and time-consuming research. Our AI-powered content generation tools help you quickly create high-quality, persuasive proposals, freeing up your time to focus on what matters most – winning more projects."
@@ -87,27 +86,27 @@ export default function Home() {
           l3="Trained on thousands of winning AEC proposals"
           l4="Automatic requirement alignment and compliance checking"
           img2="/assets/wand-magic.png"
-          img3="/assets/primary.png"
-          img4="/assets/double-check.png"
+          img3="/assets/brain-circuit.png"
+          img4="/assets/check-double.png"
         />
         <Tmp2 image="/assets/colloboration.png" className="px-24 pt-16" />
 
         <Tmp3
-          img1="/icons/users.png"
+          img1="/assets/Primary.png"
           l1="Collaboration"
           title="Seamless teamwork. Enhanced efficiency. Win together."
           subtitle="Break down silos and streamline communication with our powerful collaboration tools. Work together seamlessly with your team, subcontractors, and stakeholders in a centralised platform, ensuring everyone is aligned and contributing to a winning proposal."
           l2="Chat, comment, and collaborate directly within proposals"
           l3="Stay informed with instant progress notifications"
           l4="Control access and sharing with granular permissions"
-          img2="/icons/messages.png"
+          img2="/assets/chat.png"
           img3="/icons/clock.png"
           img4="/icons/lock.png"
         />
         <Tmp2 image="/assets/knowledgehub.png" className="py-32 px-20" />
 
         <Tmp3
-          img1="/assets/primary.png"
+          img1="/assets/brain-circuit.png"
           l1="Collaboration"
           title="Unlock the power of a centralised knowledge hub for RFP success."
           subtitle="Our centralised knowledge hub provides a single source of truth for all your RFP content, including past proposals, technical documentation, and industry best practices. Easily access your collective knowledge to create winning proposals, faster."
@@ -124,19 +123,19 @@ export default function Home() {
         Respond to RFPs 10x faster
       </Heading>
 
-      <div className="flex gap-24 container mx-auto mb-32 flex-wrap">
+      <div className="flex gap-24 container mx-auto mb-32 flex-wrap  ">
         <Tmp4
-          image="/icons/trophy.png"
+          image="/assets/trophy.png"
           title="Boost your RFP win rates by up to 40%"
           subtitle="Leverage smart automation to craft responses that align seamlessly with client expectations, giving you a decisive competitive edge."
         />
         <Tmp4
-          image="/icons/alarm-clock.png"
+          image="/assets/alarm-clock.png"
           title="Slash your response time from 200 to 20 hours"
           subtitle="Bid on more projects, maximize your opportunities, and keep your team focused on strategic tasks without burning out."
         />
         <Tmp4
-          image="/icons/costs.png"
+          image="/assets/costs.png"
           title="Cut costs by up to 50% per proposal"
           subtitle="Eliminate inefficiencies and cut costs, simultaneously. Streamline your workflow, reduce errors, and optimize resources to save time."
         />
@@ -146,24 +145,24 @@ export default function Home() {
         Seamless AEC integrations
       </Heading>
 
-      <div className="grid grid-cols-2 grid-row-auto gap-8 container mx-auto mb-36">
+      <div className="grid grid-cols-2 grid-row-auto gap-8 container mx-auto mb-36 ">
         <Tmp5
-          image="/icons/puzzle.png"
+          image="/assets/puzzle.png"
           title="Plugins"
           subtitle="Effortlessly connect with industry-leading tools like InDesign, Procore, and Revit to streamline your workflow and improve efficiency."
         />
         <Tmp5
-          image="/icons/list-check.png"
+          image="/assets/list-check.png"
           title="Smart Content Manager"
           subtitle="Leverage a centralized hub to organize, update, and reuse your best proposal content, saving time and maintaining consistency."
         />
         <Tmp5
-          image="/icons/folder-magnifying.png"
+          image="/assets/folder-magnifying-glass.png"
           title="Opportunity Finder"
           subtitle="Stay ahead by identifying the most lucrative RFPs tailored to your expertise, ensuring you never miss a winning opportunity."
         />
         <Tmp5
-          image="/icons/chart-column.png"
+          image="/assets/chart-column.png"
           title="Data-Driven Risk Analysis"
           subtitle="Make smarter decisions with pricing insights and market risk analytics, ensuring every project is both profitable and strategic."
         />
@@ -180,7 +179,7 @@ export default function Home() {
       </div>
 
       <div className="relative container text-white py-24 mb-24 mx-auto rounded-3xl flex flex-col gap-8 justify-center items-center bg-gradient-to-tr from-[#2B3544] to-[#333D4D] ">
-        <div className="absolute top-0 bottom-0 right-0 aspect-square">
+        <div className="absolute  top-0 bottom-0 right-0 aspect-square">
           <img
             src="/assets/actuality-logo.png"
             style={{
@@ -195,8 +194,8 @@ export default function Home() {
           Schedule a demo today and discover how Actuality AI can help you win
           more work.
         </p>
-        <div className="flex justify-center gap-4 items-stretch">
-          <BookDemoButton className="p-6 py-[1.74rem] rounded-2xl text-[1.25rem] text-gray-800 bg-[#E5E7EB] hover:opacity-90 hover:text-gray-800 hover:bg-[#E5E7EB]" />
+        <div className="flex justify-center z-[100000] gap-4 items-stretch" >
+          <BookDemoButton className="cursor-pointer p-6 py-[1.74rem] rounded-2xl text-[1.25rem] text-gray-800 bg-[#E5E7EB] hover:opacity-90 hover:text-gray-800 hover:bg-[#E5E7EB]" />
           <Button
             variant="ghost"
             className="p-6 py-[1.7rem] bg-transparent font-semibold border-[1px] border-gray-300 rounded-xl text-lg text-[1.24rem] text-[#E5E7EB]"
@@ -221,7 +220,7 @@ const Tmp5 = ({
   image: string;
 }) => {
   return (
-    <div className="flex flex-col gap-6 p-8 rounded-xl border  relative z-20 overflow-hidden">
+    <div className="z-[-2] flex flex-col gap-6 p-8 rounded-xl border  relative overflow-hidden">
       <div className="absolute top-0 right-0 left-0 bottom-0 bg-[#f7f8fb] -z-10 opacity-[0.96]"></div>
       <div className="absolute top-0 right-0 bottom-0 aspect-square log-1 -z-20">
         <img
@@ -257,14 +256,14 @@ const Tmp4 = ({
   subtitle: string;
 }) => {
   return (
-    <div className="flex-1 flex flex-col justify-center text-center items-center gap-10">
+    <div className="flex-1 flex flex-col text-center items-center ">
       <div className="size-14 grid place-items-center bg-gray-100 rounded-lg">
         <img src={image} width="30" height="30" alt={title} />
       </div>
-      <p className="text-[#1F2937] text-[1.8rem] font-semibold leading-[2.2rem]">
+      <p className="text-[#1F2937] text-[1.5rem] font-semibold leading-[2.2rem] my-10">
         {title}
       </p>
-      <p className="text-[#6B7280] text-lg">{subtitle}</p>
+      <p className="text-[#6B7280] text-md">{subtitle}</p>
     </div>
   );
 };
@@ -272,7 +271,7 @@ const Tmp4 = ({
 const Tmp2 = ({ image, className }: { image: string; className?: string }) => {
   return (
     <div
-      className={`flex-1 bg-gradient-to-b from-white  to-[#0000ff07] rounded-3xl  shadow-sm  ${className}`}
+      className={`flex-1 bg-gradient-to-b from-[#F9FAFB] border to-[#0000ff07] rounded-3xl  shadow-sm  ${className}`}
     >
       <img src={image} width="100%" alt="csd" />
     </div>
@@ -306,9 +305,7 @@ const Tmp3 = ({
     <div className="flex-1 flex flex-col gap-8">
       <Tmp1 textClassName="text-lg  font-semibold" title={l1} image={img1} />
       <Heading className="text-[2.2rem] leading-[2.6rem]">{title}</Heading>
-      <SubHeading className="text-[1.5rem] leading-[2.1rem]">
-        {subtitle}
-      </SubHeading>
+      <p className="text-[#6B7280] text-md">{subtitle}</p>
       <div className="flex flex-col gap-8">
         <Tmp1 title={l2} image={img2} />
         <Tmp1 title={l3} image={img3} />
@@ -331,7 +328,7 @@ const Tmp1 = ({
       <div className="size-10 grid place-items-center bg-gray-100 rounded-lg">
         <img src={image} width="22" height="22" alt="csd" />
       </div>
-      <span className={`text-[#6B7280] text-lg ${textClassName}`}>{title}</span>
+      <span className={`text-[#6B7280] text-md ${textClassName}`}>{title}</span>
     </div>
   );
 };
@@ -359,7 +356,7 @@ const AnimationCard = ({
       <Heading className="text-[1.3rem] font-semibold text-[#1F2937] leading-[1.6rem]">
         {title}
       </Heading>
-      <SubHeading className="text-center">{subtitle}</SubHeading>
+      <SubHeading className="text-center ">{subtitle}</SubHeading>
     </div>
   );
 };
@@ -385,23 +382,23 @@ const Footer = () => {
         <div>
           <p className="mb-6 text-xl text-[#6B7280]">Company</p>
           <p className="text-[#1F2937] text-md mb-2">Home</p>
-          <p className="text-[#1F2937] text-md mb-2">Book a demo</p>
+         <a href="https://calendly.com/rishabh_gupta/30min?month=2025-02" >   <p className="text-[#1F2937] text-md mb-2">Book a demo</p></a>
         </div>
         <div>
           <p className="mb-6 text-xl text-[#6B7280]">Legal</p>
           <p className="text-[#1F2937] text-md mb-2">Terms of service</p>
           <p className="text-[#1F2937] text-md mb-2">Privacy policy</p>
         </div>
-
+        <a href="https://www.linkedin.com/in/rishabhgupta55/" target="_blank">
         <img
           src="/assets/linkedin.png"
           alt="linekdin"
           className="log- "
           style={{
             width: "30px",
-            height: "35px",
+            height: "33px",
           }}
-        />
+        /></a>
       </div>
     </div>
   );
