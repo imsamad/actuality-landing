@@ -9,7 +9,16 @@ import { subtle } from "node:crypto";
 import { FAQs } from "./faq";
 import { Button } from "@/components/ui/button";
 import { OrgLogos } from "@/components/OrgLogos";
+// import Lottie from "lottie-react";
+import anim1 from "../public/anims/anim1.json"
+import anim2 from "../public/anims/anim2.json"
+import anim3 from "../public/anims/anim3.json"
+import anim4 from "../public/anims/anim4.json"
+import anim5 from "../public/anims/anim5.json"
+import anim6 from "../public/anims/anim6.json"
+import dynamic from 'next/dynamic';
 
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 export default function Home() {
   return (
     <>
@@ -31,18 +40,18 @@ export default function Home() {
 
       <div className="flex gap-12 mt-24  container mx-auto">
         <AnimationCard
-          image="/assets/anim4.svg"
+          image={anim1}
           title="Reduce Response Time"
           subtitle="Automate time-consuming tasks like data entry and document review to cut down response time from days to weeks."
         />
         <AnimationCard
-          image="/assets/anim5.svg"
+        image={anim2}
           title="Increase win rates"
           subtitle="Leverage AI-powered insights and industry best practices to craft compelling, error-free proposals that stand out."
         />
 
         <AnimationCard
-          image="/assets/anim6.svg"
+        image={anim3}
           title="Add AEC integrations"
           subtitle="Easily connect tools like Slack, Google Drive, Salesforce, and Procore. Actuality simplifies RFP responses and pre-construction tasks, boosting efficiency and helping you win more bids."
         />
@@ -71,7 +80,7 @@ export default function Home() {
         </p>
       </div>
       <div className="grid grid-cols-2 grid-rows-auto gap-20 gap-y-24 container mx-auto mt-28 ">
-        <Tmp2 image="/assets/team-selector.png" className="px-8 pt-8 " />
+        <Tmp2 image={anim4} className="px-8 pt-8 " />
         <Tmp3
           img1="/icons2/sparkles.png"
           l1="Content Generation"
@@ -84,7 +93,7 @@ export default function Home() {
           img3="/assets/brain-circuit.png"
           img4="/assets/check-double.png"
         />
-        <Tmp2 image="/assets/colloboration.png" className="px-24 pt-16" />
+        <Tmp2 image={anim5} className="px-24 pt-16" />
 
         <Tmp3
           img1="/assets/Primary.png"
@@ -98,7 +107,7 @@ export default function Home() {
           img3="/icons/clock.png"
           img4="/icons/lock.png"
         />
-        <Tmp2 image="/assets/knowledgehub.png" className="py-32 px-20" />
+        <Tmp2 image={anim6} className="py-32 px-20" />
 
         <Tmp3
           img1="/assets/brain-circuit.png"
@@ -263,12 +272,15 @@ const Tmp4 = ({
   );
 };
 
-const Tmp2 = ({ image, className }: { image: string; className?: string }) => {
+const Tmp2 = ({ image, className }: { image: any; className?: string }) => {
   return (
     <div
-      className={`flex-1 bg-gradient-to-b from-[#F9FAFB] border to-[#0000ff07] rounded-3xl  shadow-sm  ${className}`}
+      className={`w-[608px] flex-1 bg-gradient-to-b from-[#F9FAFB] overflow-hidden border to-[#0000ff07] rounded-3xl  shadow-sm  `}
     >
-      <img src={image} width="100%" alt="csd" />
+      <div className="w-[608px] h-[512px] overflow-hidden" >
+        <Lottie animationData={image} loop={true} autoplay={true} />
+      </div>
+      {/* <img src={image} width="100%" alt="csd" /> */}
     </div>
   );
 };
@@ -335,19 +347,12 @@ const AnimationCard = ({
 }: {
   title: string;
   subtitle: string;
-  image: string;
+  image: any;
 }) => {
   return (
     <div className="rounded-3xl w-1/3 bg-gradient-to-b from-[#F8FAFB] to-[#0000ff07] flex flex-col  items-center gap-6 px-14 py-8 border-[1px] border-[#E5E7EB]">
-      <img
-        src={image}
-        style={{
-          width: 184,
-          height: 184,
-          overflow: "hidden",
-        }}
-        alt={title}
-      />
+      <div className="w-[184px] h-[184px] overflow-hidden " > <Lottie animationData={image} loop={true} autoplay={true} /></div>
+
       <Heading className="text-[1.3rem] font-semibold text-[#1F2937] leading-[1.6rem]">
         {title}
       </Heading>

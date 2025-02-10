@@ -2,7 +2,7 @@ export const OrgLogos = () => {
   return <>
     <p className="mt-14 text-center text-xl text-[#6B7280]">Trusted by</p>
 
-    <div className="logos-wrapper z-[-2] w-screen overflow-hidden">
+    <div className="logos-wrapper z-[-2] container mx-auto overflow-hidden">
       <div className="logos my-10 ">
         <div className="logos-slide w-full">
           {Array(3).fill([
