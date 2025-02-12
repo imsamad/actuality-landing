@@ -70,7 +70,7 @@ body {
 
 .logos-slide {
   display: flex;
-  animation: 35s slide infinite linear;
+  animation: 14s slide infinite linear;
 }
 .logos-wrapper:hover {
     animation-play-state: paused;
