@@ -484,10 +484,10 @@ export const Footer = () => {
         </div>
         <div>
           <p className="mb-2 md:mb-6 text-xl text-[#6B7280]">Legal</p>
-          <a href="/terms-of-service">
+          <a href="https://rfp.actuality.live/terms-of-service">
             <p className="text-[#1F2937] text-md mb-2">Terms of service</p>
           </a>
-          <a href="/privacy-policy">
+          <a href="https://rfp.actuality.live/privacy-policy">
             <p className="text-[#1F2937] text-md mb-2">Privacy policy</p>{" "}
           </a>
         </div>
