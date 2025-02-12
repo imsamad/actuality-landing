@@ -5,36 +5,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { useAnimate } from "motion/react";
 
-function Navbar1() {
-  const [scope, animate] = useAnimate();
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY > 50;
-      if (scrolled !== isScrolled) {
-        setIsScrolled(scrolled);
-        animate(
-          scope.current,
-          { width: scrolled ? 1248 : 1400 },
-          { type: "spring", stiffness: 100 },
-        );
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled, animate, scope]);
-
-  return (
-    <div
-      ref={scope}
-      className="fixed top-0 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-2xl p-4 w-[1400px]"
-    >
-      <div className="text-center font-semibold">My Navbar</div>
-    </div>
-  );
-}
 
 export const HeroPage = () => {
   const dashboardRef = useRef<HTMLImageElement>(null);
@@ -70,11 +41,12 @@ export const HeroPage = () => {
       <div className="z-10">
         {/* <Navbar1/> */}
         <Navbar />
-        <div className="h-36 md:h-[220px] w-full" />
+        {/* 64 24 */}
+        <div className="h-[128px] md:h-[200px] w-full" />
       <div className="flex justify-center">
           <FancyButton />
         </div>
-        <div className="flex flex-col text-center items-center mt-10 ">
+        <div className="flex flex-col text-center items-center md:mt-[40px] ">
           <Heading className="text-3xl md:leading-[3.75rem] md:text-[3.75rem] font-[500]">
             Create winning RFP
           </Heading>
@@ -84,7 +56,7 @@ export const HeroPage = () => {
           </Heading>
         </div>
 
-        <div className="flex flex-col items-center text-center text-lg md:text-[1.3rem] text-[#6B7280] mt-10 ">
+        <div className="flex flex-col items-center text-center text-lg md:text-[1.3rem] text-[#6B7280] md:mt-[32px]">
           {/* <p>{height.toString()}</p> */}
           <p>
             Automate your RFP responses, streamline team collaboration, and{" "}
@@ -92,8 +64,9 @@ export const HeroPage = () => {
             efficiency.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-center gap-4 md:gap-6 mt-10">
-          <BookDemoButton className="p-6 rounded-xl text-lg w-full md:w-auto" />
+        <div className="w-full flex flex-col md:flex-row justify-center gap-4 md:gap-[24px] md:mt-[40px]">
+          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-end" ><BookDemoButton className="p-6 rounded-xl text-lg w-full md:w-auto" /></div>
+          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-start" >
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSek1b_opJpYa1AcAnhx5R81Nh2Fl6_n2w8yan93ry_Zyt9blw/viewform"
             target="_blank"
@@ -105,10 +78,11 @@ export const HeroPage = () => {
               Request Early Access
             </Button>
           </a>
+          </div>
         </div>
 
         <div
-          className="container mx-auto mt-10"
+          className="container mx-auto md:mt-[96px]"
           ref={dashboardRef}
         >
           <img
@@ -131,15 +105,15 @@ export const HeroPage = () => {
 
 const FancyButton = () => {
   return (
-    <div className="inline-block rounded-full p-[1px] mx-auto relative overflow-hidden cursor-pointer">
-      <button className="relative flex items-center py-[0.25rem] md:py-2 px-4 border rounded-full z-40 bg-[#F9FAFB]">
+    <div className="inline-block rounded-full w-[200px] h-[36px] p-[1px] mx-auto h relative overflow-hidden cursor-pointer">
+      <button className="relative flex items-center w-full h-full py-[0.25rem] md:py-2 px-4 border rounded-full z-40 bg-[#F9FAFB]">
         <img
           src="/__0101__new__actuality__/assets/sparkles.svg"
           alt="star icon"
           className="mr-2 md:w-[24px] md:h-[24px]"
         />
-        <span className="text-[12px] md:text-[16px] text-[#6B7280]">
-          Say hello to Actuality AI
+        <span className="text-[14px]">
+          Say&nbsp;hello&nbsp;to&nbsp;Actuality&nbsp;AI
         </span>
       </button>
       <div
@@ -194,17 +168,19 @@ export const NavbarDektop = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isScrolled, animate, scope]);
   return (
-    <div className="hidden md:block fixed z-[100000] top-4 md:top-10 left-0 right-0 md:px-0 px-2 md:pl-[1.1rem] md:pr-[0.2rem]">
+    <div className="hidden md:block fixed z-[100000] top-[32px] left-0 right-0 md:px-0 px-2 md:pl-[1.1rem] md:pr-[0.2rem]">
       <div
         ref={scope}
-        className="container md:w-[1400px] z-100 mx-auto h-[60px] md:h-[70px] backdrop-blur-md  shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   px-4 rounded-[1rem] md:rounded-[1.4rem] flex items-center justify-between bg-transparent"
+        className="container md:w-[1400px] z-100 mx-auto overflow-hidden h-[72px] backdrop-blur-md  shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   px-4 rounded-[1rem] md:rounded-[16px] flex items-center justify-between bg-transparent"
       >
         {/* <h1 className="text-3xl font-semibold">Actuality</h1> */}
         <a href="/">
           <img
             src="/__0101__new__actuality__/assets/actuality.svg"
-            width="130px"
-            height="100px"
+            style={{
+              width:118,
+              height:52
+            }}
             alt="csd"
             className="hidden md:block"
           />
@@ -216,28 +192,44 @@ export const NavbarDektop = () => {
             className="md:hidden block"
           />
         </a>
+        <a
+          href="https://calendly.com/rishabh_gupta/30min?month=2025-02"
+          target="_blank"
+          className={`bg-gradient-to-b from-[#374151] to-[#1F2937] text-[16px] text-white w-[126px] h-[40px] grid place-items-center rounded-[8px]`}
+        >
+          Book a demo
 
-        <BookDemoButton className="text-[1.1rem] py-4 md:py-6 rounded-lg md:rounded-xl " />
+        </a>
+        {/* <BookDemoButton className="text-[1.1rem] py-4 md:py-6 rounded-lg md:rounded-xl w-[126px] h-[40px]" /> */}
       </div>
     </div>
   );
 };
 export const NavbarMobile = () => {
   return (
-    <div className="block md:hidden fixed z-[100000] top-4 md:top-10 left-0 right-0 px-[24px]">
-      <div className="container z-100 mx-auto h-[60px] backdrop-blur-md  shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   px-4 rounded-[1rem] flex items-center justify-between bg-transparent">
+    <div className="block md:hidden fixed z-[100000] top-[24px] md:top-10 left-0 right-0 px-[24px]">
+      <div className="container z-100 mx-auto h-[56px] backdrop-blur-md  shadow-[2px_-3px_2px_rgba(0,0,0,0.06),-2px_3px_2px_-0px_rgba(0,0,0,0.06)]   px-4 rounded-[1rem] flex items-center justify-between bg-transparent">
         {/* <h1 className="text-3xl font-semibold">Actuality</h1> */}
         <a href="/">
           <img
             src="/__0101__new__actuality__/assets/actuality-mini.svg"
-            width="40px"
-            height="40px"
+            style={{
+              width:24,
+              height:24
+            }}
             alt="csd"
             className="block"
           />
         </a>
 
-        <BookDemoButton className="text-[1.1rem] py-4 rounded-lg" />
+        <a
+          href="https://calendly.com/rishabh_gupta/30min?month=2025-02"
+          target="_blank"
+          className={`bg-gradient-to-b from-[#374151] to-[#1F2937] text-[14px] text-white font-semibold w-[106px] h-[32px] grid place-items-center rounded-[8px]`}
+        >
+          Book a demo
+
+        </a>
       </div>
     </div>
   );

@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const sohne = localFont({
+  src: [
+    {
+      path: "./fonts/sohne-buch.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/sohne-halbfett.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/sohne-kraftig.otf",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sohne",
 });
 
 export const metadata: Metadata = {
@@ -25,14 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9FAFB] max-w-[100vw] w-screen overflow-x-hidden`}
+        className={`${sohne.variable} antialiased bg-[#F9FAFB] max-w-[100vw] w-screen overflow-x-hidden`}
       >
-        <div className="max-w-[1248px] mx-auto overflow-hidden px-[24px] md:px-0 ">
-
-        {children}
-
+        <div className="max-w-[1248px] mx-auto overflow-hidden px-[24px] md:px-0">
+          {children}
         </div>
       </body>
     </html>

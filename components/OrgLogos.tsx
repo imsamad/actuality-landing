@@ -1,9 +1,9 @@
 export const OrgLogos = () => {
   return <>
-    <p className="mt-14 z-[-1] text-center text-md md:text-xl text-[#6B7280]">Trusted by</p>
+    <p className="md:mt-[96px] z-[-1] text-center text-md md:text-xl text-[#6B7280]">Trusted by</p>
 
     <div className="logos-wrapper container mx-auto overflow-hidden">
-      <div className="logos my-10 ">
+      <div className="logos my-[48px] ">
         <div className="logos-slide w-full">
           {Array(3).fill([
             "/__0101__new__actuality__/assets/logo-ojibik.png",

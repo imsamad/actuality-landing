@@ -2,18 +2,12 @@ import { Navbar } from "@/components/hero/hero";
 import { Footer } from "../page";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Terms of services | Actuality Live",
-  description: "Review our terms and conditions before using Actuality Live.",
-};
 const TOS = () => {
   return (
     <>
       <Navbar />
       <div className="max-w-4xl mx-auto p-8 mt-20 md:mt-36 mb-4 md:mb-12 text-gray-900">
-        <h1 className="text-3xl font-bold mb-4 ">
-          TERMS OF SERVICE
-        </h1>
+        <h1 className="text-3xl font-bold mb-4 ">TERMS OF SERVICE</h1>
         <p className="text-gray-600  mb-4">
           <b> Effective Date:</b> December 12th, 2024
         </p>

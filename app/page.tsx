@@ -16,6 +16,8 @@ import anim5 from "../public/__0101__new__actuality__/assets/anims/anim5.json";
 import anim6 from "../public/__0101__new__actuality__/assets/anims/anim6.json";
 import dynamic from "next/dynamic";
 
+
+
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 export default function Home() {
   return (
@@ -23,18 +25,18 @@ export default function Home() {
       <HeroPage />
 
       <OrgLogos />
-      <div className="flex flex-col items-center mt-8 md:mt-24 ">
+      <div className="flex flex-col items-center mt-8 md:mt-[128px] ">
         <Heading className="text-2xl font-semibold md:font-normal text-center md:text-[2.7rem] md:leading-[2.5rem] mb-6">
           Unleash the power of AI for RFP success
         </Heading>
-        <p className="text-md text-[#6B7280] text-center">
+        <p className="text-md text-[#6B7280] text-center md:mt-[32px]">
           Actuality AI is designed specifically for AEC companies to streamline
           and automate the <br className="hidden md:block" /> RFP process,
           giving you the edge to secure more wins.
         </p>
       </div>
 
-      <div className="flex gap-8 md:gap-12 mt-12 md:mt-24 flex-col md:flex-row container mx-auto ">
+      <div className="flex gap-8 md:gap-[40px] mt-12 md:mt-[96px] flex-col md:flex-row container mx-auto ">
         <AnimationCard
           image={anim1}
           title="Reduce Response Time"
@@ -54,11 +56,11 @@ export default function Home() {
       </div>
 
       {/* features */}
-      <div className="flex flex-col items-center mt-12 md:mt-24 text-center ">
+      <div className="flex flex-col items-center mt-12 text-center md:mt-[128px]">
         <Heading className="text-2xl font-semibold md:text-[2.7rem] md:leading-[2.5rem]  mb-6">
           Features that drive results
         </Heading>
-        <p className="text-md text-[#6B7280]">
+        <p className="text-md text-[#6B7280] md:mt-[32px]">
           Empower your team with tools that simplify complexity and elevate
           proposal quality.
           <br className="hidden md:block" />
@@ -69,8 +71,8 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-rows-auto  md:gap-20 gap-y-8 md:gap-y-24 container mx-auto  mt-12 md:mt-28 ">
-        <Tmp2 image={anim4} className="px-8 pt-8 " />
+      <div className="grid md:grid-cols-2 grid-rows-auto gap-y-8 md:gap-y-[80px] md:gap-[80px]  container mx-auto  mt-12 md:mt-[96px] ">
+        <Tmp2 image={anim4}   />
         <Tmp3
           img1="/__0101__new__actuality__/assets/sparkles-dark.svg"
           l1="Content Generation"
@@ -83,7 +85,7 @@ export default function Home() {
           img3="/__0101__new__actuality__/assets/brain-circuit.svg"
           img4="/__0101__new__actuality__/assets/check-double.svg"
         />
-        <Tmp2 image={anim5} className="px-24 pt-16" />
+        <Tmp2 image={anim5}   />
 
         <Tmp3
           img1="/__0101__new__actuality__/assets/Primary.svg"
@@ -97,7 +99,7 @@ export default function Home() {
           img3="/__0101__new__actuality__/assets/clock.svg"
           img4="/__0101__new__actuality__/assets/lock.svg"
         />
-        <Tmp2 image={anim6} className="py-32 px-20" />
+        <Tmp2 image={anim6}  />
 
         <Tmp3
           img1="/__0101__new__actuality__/assets/brain-circuit.svg"
@@ -340,10 +342,10 @@ const Tmp4 = ({
   );
 };
 
-const Tmp2 = ({ image, className }: { image: any; className?: string }) => {
+const Tmp2 = ({ image }: { image: any;  }) => {
   return (
     <div
-      className={` md:w-[608px] flex-1 bg-gradient-to-b from-[#F9FAFB] overflow-hidden border to-[#0000ff07] rounded-xl md:rounded-3xl  shadow-sm  `}
+      className={` md:w-[608px] log-1 flex-1 bg-gradient-to-b from-[#F9FAFB] overflow-hidden border to-[#0000ff07] rounded-xl md:rounded-3xl  shadow-sm  `}
     >
       <div className="md:w-[608px] md:h-[512px] overflow-hidden">
         <Lottie animationData={image} loop={true} autoplay={true} />
@@ -377,15 +379,16 @@ const Tmp3 = ({
   l4: string;
 }) => {
   return (
-    <div className="flex-1 flex flex-col gap-4 md:gap-8 ">
+    <div className="flex-1 log-1 flex flex-col">
       <Tmp1 textClassName="text-lg font-semibold" title={l1} image={img1} />
-      <Heading className="text-xl font-semibold md:font-normal md:text-[2.2rem] md:leading-[2.6rem]">
+      <Heading className="text-xl font-semibold md:font-normal md:text-[2.2rem] md:leading-[2.6rem] md:mt-[32px] md:mb-[24px]">
         {title}
       </Heading>
-      <p className="text-[#6B7280] text-sm md:text-md md:flex-1 md:flex md:flex-col md:justify-center   ">
+      {/*  md:flex-1 md:flex md:flex-col md:justify-center   */}
+      <p className="text-[#6B7280] text-sm md:text-md ">
         {subtitle}
       </p>
-      <div className="flex flex-col gap-2 md:gap-8">
+      <div className="flex flex-col gap-2 md:gap-y-[20px] md:mt-[32px]">
         <Tmp1 title={l2} image={img2} textClassName="text-sm md:text-md" />
         <Tmp1 title={l3} image={img3} textClassName="text-sm md:text-md" />
         <Tmp1 title={l4} image={img4} textClassName="text-sm md:text-md" />
@@ -403,8 +406,8 @@ const Tmp1 = ({
   textClassName?: string;
 }) => {
   return (
-    <div className="flex gap-6 items-center">
-      <div className="min-w-[2.5rem]  min-h-[2.5rem] max-w-[2.5rem] max-h-[2.5rem] grid place-items-center bg-gray-100 rounded-lg">
+    <div className="flex md:gap-[20px] items-center">
+      <div className="min-w-[36px]  min-h-[36px] max-w-[36px] max-h-[36px] grid place-items-center bg-gray-100 rounded-lg">
         <img
           src={image}
           style={{
@@ -432,10 +435,10 @@ const AnimationCard = ({
 }) => {
   return (
     <div className="rounded-md md:rounded-3xl md:w-1/3 bg-gradient-to-b from-[#F8FAFB] to-[#0000ff07] flex flex-col  items-center gap-4 md:gap-6 px-6 py-6 md:px-14 md:py-8 border-[1px] border-[#E5E7EB]">
-      <div className="w-[184px]  h-[184px] overflow-hidden">
+      <div className="w-[184px]  h-[184px] overflow-hidden md:md-[32px]">
         <Lottie animationData={image} loop={true} autoplay={true} />
       </div>
-      <Heading className="text-[1.3rem] font-semibold text-[#1F2937] leading-[1.6rem]">
+      <Heading className="text-[1.3rem] font-semibold text-[#1F2937] leading-[1.6rem] md:mb-[16px]">
         {title}
       </Heading>
       <p className="text-center text-[#6B7280] text-md md:text-xl">
