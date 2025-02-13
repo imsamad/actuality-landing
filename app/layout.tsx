@@ -8,17 +8,14 @@ const sohne = localFont({
     {
       path: "./fonts/sohne-buch.otf",
       weight: "400",
-      style: "normal",
     },
     {
       path: "./fonts/sohne-halbfett.otf",
       weight: "600",
-      style: "normal",
     },
     {
       path: "./fonts/sohne-kraftig.otf",
       weight: "500",
-      style: "normal",
     },
   ],
   variable: "--font-sohne",

@@ -36,11 +36,11 @@ export const FAQs = () => {
           key={v.question}
         >
           <AccordionTrigger
-            className={`py-4 md:py-6 text-gray-900 text-md md:text-[1.3rem] md:leading-[1.3rem] font-semibold hover:no-underline ${i == 0 ? `pt-0` : ""}`}
+            className={`pb-[16px] pt-[16px] font-[500] hover:no-underline text-[16px]  leading-[24px]  md:text-[18px] md:leading-[26px] text-[#1F2937]`}
           >
             {v.question}
           </AccordionTrigger>
-          <AccordionContent className="text-[#6B7280] text-md md:text-lg">
+          <AccordionContent className="text-[#6B7280] text-[14px] leading-[20px] md:text-[16px] md:leading-[24px] pb-[16px]">
             {v.answer}
           </AccordionContent>
         </AccordionItem>
