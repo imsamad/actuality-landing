@@ -564,12 +564,12 @@ export const Footer = () => {
           <p className="mb-[16px] md:mb-[20px] text-[#6B7280] text-[16px] leading-[24px]">
             Legal
           </p>
-          <a href="https://rfp.actuality.live//terms-of-service">
+          <a target="_blank" href="https://rfp.actuality.live//terms-of-service">
             <p className="text-[#1F2937] text-[16px] leading-[24px] mb-[4px] md:mb-2">
               Terms of service
             </p>
           </a>
-          <a href="https://rfp.actuality.live//privacy-policy">
+          <a target="_blank" href="https://rfp.actuality.live//privacy-policy">
             <p className="text-[#1F2937] text-[16px] leading-[24px] mb-2">
               Privacy policy
             </p>{" "}
