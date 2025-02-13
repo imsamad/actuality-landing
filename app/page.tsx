@@ -211,7 +211,7 @@ export default function Home() {
                 target="_blank"
                 className="text-[#E5E7EB] md:text-[18px]  bg-transparent w-full md:w-[210px] hover:text-gray-500 border-[1px] h-[44px] md:h-[48px]  text-[16px]  grid place-items-center rounded-[10px] md:rounded-[14px] font-[500]"
               >
-                Request Early Access
+                Request early access
               </a>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Home() {
               target="_blank"
               className="w-full md:w-[210px] border-[1px] h-[44px] md:h-[48px] text-[16px]  grid place-items-center rounded-[10px] md:rounded-[14px] "
             >
-              Request Early Access
+              Request early access
             </a>
             </div>
           </div> */}
@@ -246,21 +246,19 @@ const Tmp5 = ({
   imageBg: string;
 }) => {
   return (
-    <div
-      className="z-[-2] flex flex-col gap-4 md:gap-6 p-6 md:p-[24px] relative overflow-hidden seamless-card"
-    >
-      <div className="absolute top-0 right-0 left-0 bottom-0 bg-[#f7f8fb] _seamless-card-overlay -z-10 opacity-[0.96]"></div>
-      <div className="absolute top-0 right-0 bottom-0  aspect-square -z-20 ">
-        {/* <div className="min-w-[40px] max-w-[40px] min-h-w-[40px] max-h-[40px]" ></div> */}
+    <div className="z-[-2] flex flex-col gap-4 md:gap-6 p-6 md:p-[24px] relative overflow-hidden seamless-card">
+      {/* <div className="absolute top-0 right-0 left-0 bottom-0 bg-[#f7f8fb] _seamless-card-overlay -z-10 opacity-[0.96]"></div> */}
+      {/* <div className="absolute top-0 right-0 bottom-0  aspect-square -z-20 ">
+        <div className="min-w-[40px] max-w-[40px] min-h-w-[40px] max-h-[40px]" ></div>
         <img
           src={imageBg}
           // width="40"
           // height="40"
           alt={title}
           style={{
-            transform: "scale(1.5)",
+            transform: "scale(1.2)",
             width: "100%",
-            height: "178px",
+            height: "100%",
             // position:"relative",
             // top:0,
             // right:0,
@@ -269,7 +267,7 @@ const Tmp5 = ({
           }}
           className="-z-10  "
         />
-      </div>
+      </div> */}
       <img
         src={image}
         style={{ width: 24, height: 24 }}
@@ -375,11 +373,11 @@ const Tmp4 = ({
 const Tmp2 = ({ image }: { image: any }) => {
   return (
     <div
-      className={` md:w-[608px]  mb-[32px] md:mb-0 flex-1  overflow-hidden  rounded-xl md:rounded-[24px] features-card`}
+      className={` md:w-[608px] md:h-[512px] mb-[32px] md:mb-0 flex-1  overflow-hidden  rounded-xl md:rounded-[24px] features-card`}
     >
-      <div className="md:w-[608px] md:h-[512px] overflow-hidden">
-        <Lottie animationData={image} loop={true} autoplay={true} />
-      </div>
+      {/* <div className="md:w-[608px] md:h-[512px] overflow-hidden p--[0.5px]"> */}
+      <Lottie animationData={image} loop={true} autoplay={true} />
+      {/* </div> */}
       {/* <img src={image} width="100%" alt="csd" /> */}
     </div>
   );
@@ -453,9 +451,9 @@ const Tmp1 = ({
 }) => {
   return (
     <div className="flex gap-[20px] items-center">
-      <div className="relative min-w-[36px] min-h-[36px] max-w-[36px] max-h-[36px] icon-border-anim-mini grid place-items-center rounded-[8px]">
-        <div className="absolute inset-0 rounded-[8px] p-[1px]  -z-10 "></div>
-               <img
+      <div className="relative min-w-[32px] min-h-[32px] max-w-[32px] max-h-[32px] md:min-w-[36px] md:min-h-[36px] md:max-w-[36px] md:max-h-[36px] icon-border-anim-mini grid place-items-center rounded-[8px] ">
+        {/* <div className="absolute inset-0 rounded-[8px] p-[1px]  -z-10 "></div> */}
+        <img
           src={image}
           style={{
             width: 16,

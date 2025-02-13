@@ -66,8 +66,8 @@ export const HeroPage = () => {
             efficiency.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-center gap-[16px] mt-[24px] md:gap-[24px] md:mt-[40px] ">
-          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-end ">
+        {/* <div className="w-full flex flex-col md:flex-row justify-center gap-[16px] mt-[24px] md:gap-[24px] md:mt-[40px] log-1">
+          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-end log-1">
             <a
               href="https://calendly.com/rishabh_gupta/30min?month=2025-02"
               target="_blank"
@@ -76,7 +76,7 @@ export const HeroPage = () => {
               Book a demo
             </a>
           </div>
-          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-start ">
+          <div className="w-full md:w-auto md:flex-1 md:flex md:justify-start log-1">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSek1b_opJpYa1AcAnhx5R81Nh2Fl6_n2w8yan93ry_Zyt9blw/viewform"
               target="_blank"
@@ -85,8 +85,27 @@ export const HeroPage = () => {
               Request Early Access
             </a>
           </div>
+        </div> */}
+         <div className="w-full flex flex-col md:flex-row justify-center gap-[16px] mt-[24px] md:gap-[24px] md:mt-[40px] ">
+          <div className="w-full md:w-auto md:flex-auto md:flex md:justify-end  ">
+            <a
+              href="https://calendly.com/rishabh_gupta/30min?month=2025-02"
+              target="_blank"
+              className={`w-full btn1 md:w-[140px] h-[44px] md:h-[48px] bg-gradient-to-b from-[#374151] to-[#1F2937] text-[16px] md:text-[18px] text-white grid place-items-center rounded-[10px] md:rounded-[14px] font-[500]`}
+            >
+              Book a demo
+            </a>
+          </div>
+          <div className="w-full md:w-auto md:flex-auto md:flex md:justify-start ">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSek1b_opJpYa1AcAnhx5R81Nh2Fl6_n2w8yan93ry_Zyt9blw/viewform"
+              target="_blank"
+              className="w-full md:w-[210px] hover:text-gray-500 border-[1px] h-[44px] md:h-[48px] bg-transparent text-gray-700 text-[16px] md:text-[18px] grid place-items-center rounded-[10px] md:rounded-[14px] font-[500]"
+            >
+              Request early access
+            </a>
+          </div>
         </div>
-
         <div
           className="container mx-auto mt-[40px] md:mt-[96px] shadow-[0px_4px_32px_rgba(31,41,55,0.05)]
 "
@@ -112,12 +131,12 @@ export const HeroPage = () => {
 
 const FancyButton = () => {
   return (
-    <div className="inline-block rounded-full w-[220px] h-[36px] p-[1px] mx-auto  relative overflow-hidden cursor-pointer">
-      <button className="relative flex items-center w-full h-full py-[0.25rem] px-4 border rounded-full z-40 bg-[#F9FAFB] md:px-[12px] md:py-[8px]">
+    <div className="inline-block rounded-full w-[220px] h-[36px] p-[1px] mx-auto  relative overflow-hidden cursor-pointer ">
+      <button className="relative flex items-center justify-center w-full h-full py-[0.25rem] px-4  border rounded-full z-40 bg-[#F9FAFB] md:px-[12px] md:py-[8px]">
         <img
           src="/__0101__new__actuality__/assets/sparkles.svg"
           alt="star icon"
-          className="mr-2 md:w-[24px] md:h-[24px]"
+          className="mr-2 md:w-[24px] md:h-[24px] "
         />
         <span className="text-[14px]">
           Say&nbsp;hello&nbsp;to&nbsp;Actuality&nbsp;AI
