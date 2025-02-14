@@ -13,11 +13,11 @@ export const OrgLogos = () => {
             "/__0101__new__actuality__/assets/logo-schulich.png",
             "/__0101__new__actuality__/assets/logo-yspace.png",
             "/__0101__new__actuality__/assets/logo-seneca.png",
-          ]).flat().map((v) => (
+          ]).flat().map((v,i) => (
             <img
               // className="brightness-0 co ntrast-100 "
               src={v}
-              key={Math.random().toString()}
+              key={v + i}
               alt={v}
             />
           ))}
